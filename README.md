@@ -6,4 +6,5 @@ Ruby on Rails alerts styled with Tailwind CSS powered with Stimulus JS for close
 
 ![Preview](https://raw.githubusercontent.com/mdjamal/rails-tailwindcss-stimulus-alert-component/master/app/assets/images/demo.gif) 
 
-
+## License
+This is available as open-source under the terms of the MIT License.
