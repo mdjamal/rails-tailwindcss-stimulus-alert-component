@@ -1,2 +1,32 @@
-<h1 class="semibold text-2xl">Welcome to Kickoff!</h1>
-<p class="lead">Use this starting point as a way to quickly set up a new project by generating files, installing gems, and more.</p>
+<h1 class="semibold text-2xl">Rails Alerts!</h1>
+<p class="mb-8"> Ruby on Rails alerts styled with Tailwind CSS powered with Stimulus JS for close and auto close functions.</p>
+
+
+<h2 class="mt-4 font-semibold text-lg">Animated alerts</h2>
+<div class="mt-2 relative">
+  <div class="bg-gray-100 border border-dashed border-gray-400 text-gray-700 px-4 py-3 text-center rounded w-full absolute z-0">
+    <%= link_to "Reload Alert", root_path, class: "underline text-blue-600 hover:text-blue-700 text-sm lowercase" %>
+  </div>
+  <div data-controller="alert" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative z-10" role="alert">
+    <strong class="font-bold">Holy smokes!</strong>
+    <span class="block sm:inline">Something seriously bad happened</span>
+    <span class="absolute top-0 bottom-0 right-0 px-4 py-3"  data-action="click->alert#close">
+      <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+    </span>
+  </div>
+</div>
+
+<h2 class="mt-10 font-semibold text-lg">Auto Closing alerts</h2>
+<div class="mt-2 relative h-10">
+  <div class="bg-gray-100 border border-dashed border-gray-400 text-gray-700 px-4 py-3 text-center rounded w-full absolute z-0">
+    <%= link_to "Reload Alert", root_path, class: "underline text-blue-600 hover:text-blue-700 text-sm lowercase" %>
+  </div>
+  <div data-controller="alert" data-alert-auto-close="5000"  data-alert-animation-class="transition duration-500 ease-in-out transform opacity-0" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+  <strong class="font-bold">Holy cow!</strong>
+  <span class="block sm:inline">You are right as always. Closing in T - 5 seconds</span>
+  <span class="absolute top-0 bottom-0 right-0 px-4 py-3"  data-action="click->alert#close">
+    <svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+  </span>
+</div>
+</div>
+
